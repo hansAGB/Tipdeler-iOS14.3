@@ -13,6 +13,7 @@
 		C1B3977A25A1F48600A3E388 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1B3977825A1F48600A3E388 /* Main.storyboard */; };
 		C1B3977C25A1F49300A3E388 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1B3977B25A1F49300A3E388 /* Assets.xcassets */; };
 		C1B3977F25A1F49300A3E388 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1B3977D25A1F49300A3E388 /* LaunchScreen.storyboard */; };
+		C1B3978A25A245D900A3E388 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B3978925A245D900A3E388 /* ResultsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		C1B3977B25A1F49300A3E388 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C1B3977E25A1F49300A3E388 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C1B3978025A1F49300A3E388 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1B3978925A245D900A3E388 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,24 @@
 		C1B3977125A1F48600A3E388 /* Tipdeler iOS14.3 */ = {
 			isa = PBXGroup;
 			children = (
+				C1B3978C25A2460000A3E388 /* Controllers */,
 				C1B3977225A1F48600A3E388 /* AppDelegate.swift */,
 				C1B3977425A1F48600A3E388 /* SceneDelegate.swift */,
-				C1B3977625A1F48600A3E388 /* CalculotorViewController.swift */,
 				C1B3977825A1F48600A3E388 /* Main.storyboard */,
 				C1B3977B25A1F49300A3E388 /* Assets.xcassets */,
 				C1B3977D25A1F49300A3E388 /* LaunchScreen.storyboard */,
 				C1B3978025A1F49300A3E388 /* Info.plist */,
 			);
 			path = "Tipdeler iOS14.3";
+			sourceTree = "<group>";
+		};
+		C1B3978C25A2460000A3E388 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C1B3978925A245D900A3E388 /* ResultsViewController.swift */,
+				C1B3977625A1F48600A3E388 /* CalculotorViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +151,7 @@
 				C1B3977725A1F48600A3E388 /* CalculotorViewController.swift in Sources */,
 				C1B3977325A1F48600A3E388 /* AppDelegate.swift in Sources */,
 				C1B3977525A1F48600A3E388 /* SceneDelegate.swift in Sources */,
+				C1B3978A25A245D900A3E388 /* ResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
