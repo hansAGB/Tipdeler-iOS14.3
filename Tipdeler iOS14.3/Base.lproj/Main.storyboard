@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Calculotor View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tipdeler_iOS14_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CalculotorViewController" customModule="Tipdeler_iOS14_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -41,6 +41,9 @@
                                                         <state key="normal" title="0%">
                                                             <color key="titleColor" red="0.0" green="0.69528192280000001" blue="0.41041117910000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="tipChanged:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yqh-UA-mNk"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5K-XV-azS">
                                                         <rect key="frame" x="96" y="0.0" width="67" height="54"/>
@@ -49,6 +52,9 @@
                                                         <state key="normal" title="10%">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="tipChanged:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lTy-wf-o4O"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l35-Wt-bkf">
                                                         <rect key="frame" x="208" y="0.0" width="71" height="54"/>
@@ -59,6 +65,9 @@
                                                         <state key="normal" title="20%">
                                                             <color key="titleColor" red="0.0" green="0.69528192280000001" blue="0.41041117910000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="tipChanged:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ggC-ow-05f"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -79,6 +88,9 @@
                                                     </label>
                                                     <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Ic2-mo-7ks">
                                                         <rect key="frame" x="127" y="5" width="94" height="32"/>
+                                                        <connections>
+                                                            <action selector="stepperValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="S9p-0f-ZRL"/>
+                                                        </connections>
                                                     </stepper>
                                                 </subviews>
                                             </stackView>
@@ -100,6 +112,9 @@
                                         <state key="normal" title="Calculate">
                                             <color key="titleColor" systemColor="systemBackgroundColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="calculatePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mtl-co-vsQ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.83930516239999997" green="0.97800141569999999" blue="0.92065328359999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -147,15 +162,22 @@
                             <constraint firstItem="ylg-jk-Qak" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oJt-7h-2id"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="billTextField" destination="0GO-Zc-YOU" id="HkS-gr-sFn"/>
+                        <outlet property="spitNumberLabel" destination="CaW-B5-b1i" id="ww8-tC-SCY"/>
+                        <outlet property="tenPctButton" destination="d5K-XV-azS" id="aJS-01-hws"/>
+                        <outlet property="twentyPctButton" destination="l35-Wt-bkf" id="492-Sg-37Q"/>
+                        <outlet property="zeroPctButton" destination="UYM-yc-aH4" id="5nT-gj-xuX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="103.79464285714285"/>
         </scene>
-        <!--View Controller-->
+        <!--Calculotor View Controller-->
         <scene sceneID="eaa-0H-xsK">
             <objects>
-                <viewController id="HNq-dn-WiH" customClass="ViewController" customModule="Tipdeler_iOS14_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="HNq-dn-WiH" customClass="CalculotorViewController" customModule="Tipdeler_iOS14_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jDO-Iw-Odb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
