@@ -178,6 +178,7 @@
                         <outlet property="tenPctButton" destination="d5K-XV-azS" id="aJS-01-hws"/>
                         <outlet property="twentyPctButton" destination="l35-Wt-bkf" id="492-Sg-37Q"/>
                         <outlet property="zeroPctButton" destination="UYM-yc-aH4" id="5nT-gj-xuX"/>
+                        <segue destination="HNq-dn-WiH" kind="presentation" identifier="gaatResultaat" id="s2g-EV-cWa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -189,17 +190,17 @@
             <objects>
                 <viewController id="HNq-dn-WiH" customClass="ResultsViewController" customModule="Tipdeler_iOS14_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jDO-Iw-Odb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="UB9-20-HFp">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fs7-2b-8Y9">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="333.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="323.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0ak-0d-2YG">
-                                                <rect key="frame" x="84.5" y="207.5" width="206" height="98"/>
+                                                <rect key="frame" x="84.5" y="197.5" width="206" height="98"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total per person" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jC7-p0-TVv">
                                                         <rect key="frame" x="0.0" y="0.0" width="206" height="36"/>
@@ -223,7 +224,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="84p-xz-00N">
-                                        <rect key="frame" x="0.0" y="333.5" width="375" height="333.5"/>
+                                        <rect key="frame" x="0.0" y="323.5" width="375" height="323.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Split between 2 people, with a 10% tip" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5W-WN-TEf">
                                                 <rect key="frame" x="59.5" y="10" width="256" height="120"/>
@@ -236,7 +237,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nd5-Nd-hAB">
-                                                <rect key="frame" x="87.5" y="271.5" width="200" height="54"/>
+                                                <rect key="frame" x="87.5" y="261.5" width="200" height="54"/>
                                                 <color key="backgroundColor" red="0.0" green="0.69528192280000001" blue="0.41041117910000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="RpQ-lq-Kry"/>
@@ -278,7 +279,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zPA-ru-9U7" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="798.55072463768124" y="102.45535714285714"/>
+            <point key="canvasLocation" x="898" y="103"/>
         </scene>
     </scenes>
 </document>

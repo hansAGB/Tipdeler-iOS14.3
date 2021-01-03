@@ -15,59 +15,57 @@ class CalculotorViewController: UIViewController {
     @IBOutlet weak var twentyPctButton: UIButton!
     @IBOutlet weak var splitNumberLabel: UILabel!
     
-    var tipPerc: Float = 0.0
-    var numPeople: Int = 2
-    var billTotal: Float = 0.0
-    var deelBedrag: Float = 0.0
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        
-    }
+    var delerBrain = DelerBrain()
+    var pctTip: Int = 0
 
     @IBAction func tipChanged(_ sender: UIButton) {
         
         billTextField.endEditing(true)
-        billTotal = Float(billTextField.text ?? "0.0")!
         
         deselectButtons()
         sender.isSelected = true
         
-        let pctTip = sender.currentTitle ?? "0.0"
-        if pctTip == "0%" {
-            tipPerc = 0.0
-        } else if pctTip == "10%" {
-            tipPerc = 0.1
-        } else if pctTip == "20%" {
-            tipPerc = 0.2
+        let perc = sender.currentTitle ?? "0.0"
+        if perc == "0%" {
+            pctTip = 0
+        } else if perc == "10%" {
+            pctTip = 10
+        } else if perc == "20%" {
+            pctTip = 20
         }
-    
-        print(String(format: "%.1f", tipPerc))
     }
     
     @IBAction func stepperValueChanged(_ sender: UIStepper) {
-        print(sender.value)
-        numPeople = Int(sender.value)
+        let numPeople = Int(sender.value)
         splitNumberLabel.text = String(numPeople)
     }
     
     @IBAction func calculatePressed(_ sender: UIButton) {
-        print("Aantal mensen is \(numPeople)")
+        var total: Float
+        var tip: Float
+        var people: Int
         
-        print("Het te betalen bedrag is \(billTotal)")
-        
-        print("De gekozen TIP is \(tipPerc)")
-        
-        deelBedrag = billTotal * (1.0 + tipPerc) / Float(numPeople)
-        
-        print("De uitkomst is \(String(format: "%.2f", deelBedrag))")
+        total = Float(billTextField.text!)!
+        tip = Float(pctTip) / Float(100)
+        people = Int(splitNumberLabel.text!)!
+
+        delerBrain.BerekenDeel(total: total , tip: tip, human: people)
+        self.performSegue(withIdentifier: "gaatResultaat", sender: self)
     }
     
     func deselectButtons() {
         zeroPctButton.isSelected = false
         tenPctButton.isSelected = false
         twentyPctButton.isSelected = false
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "gaatResultaat" {
+            let destinationVC = segue.destination as! ResultsViewController
+            destinationVC.equalPart = String(format: "%.2f", delerBrain.getDeel())
+            destinationVC.numberPartisipants = delerBrain.getMens()
+            destinationVC.tipPercentage = String(" \(Int(100 * delerBrain.getTip()))%")
+        }
     }
 }
 

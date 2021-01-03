@@ -14,6 +14,8 @@
 		C1B3977C25A1F49300A3E388 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1B3977B25A1F49300A3E388 /* Assets.xcassets */; };
 		C1B3977F25A1F49300A3E388 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1B3977D25A1F49300A3E388 /* LaunchScreen.storyboard */; };
 		C1B3978A25A245D900A3E388 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B3978925A245D900A3E388 /* ResultsViewController.swift */; };
+		C1B3979425A2697700A3E388 /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B3979325A2697700A3E388 /* Bill.swift */; };
+		C1B3979725A269AA00A3E388 /* DelerBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B3979625A269AA00A3E388 /* DelerBrain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		C1B3977E25A1F49300A3E388 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C1B3978025A1F49300A3E388 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1B3978925A245D900A3E388 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		C1B3979325A2697700A3E388 /* Bill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
+		C1B3979625A269AA00A3E388 /* DelerBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelerBrain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +62,11 @@
 		C1B3977125A1F48600A3E388 /* Tipdeler iOS14.3 */ = {
 			isa = PBXGroup;
 			children = (
+				C1B3979B25A269CD00A3E388 /* Models */,
+				C1B3979925A269B600A3E388 /* Views */,
 				C1B3978C25A2460000A3E388 /* Controllers */,
 				C1B3977225A1F48600A3E388 /* AppDelegate.swift */,
 				C1B3977425A1F48600A3E388 /* SceneDelegate.swift */,
-				C1B3977825A1F48600A3E388 /* Main.storyboard */,
 				C1B3977B25A1F49300A3E388 /* Assets.xcassets */,
 				C1B3977D25A1F49300A3E388 /* LaunchScreen.storyboard */,
 				C1B3978025A1F49300A3E388 /* Info.plist */,
@@ -76,6 +81,23 @@
 				C1B3977625A1F48600A3E388 /* CalculotorViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C1B3979925A269B600A3E388 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C1B3977825A1F48600A3E388 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C1B3979B25A269CD00A3E388 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C1B3979625A269AA00A3E388 /* DelerBrain.swift */,
+				C1B3979325A2697700A3E388 /* Bill.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +171,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1B3977725A1F48600A3E388 /* CalculotorViewController.swift in Sources */,
+				C1B3979725A269AA00A3E388 /* DelerBrain.swift in Sources */,
+				C1B3979425A2697700A3E388 /* Bill.swift in Sources */,
 				C1B3977325A1F48600A3E388 /* AppDelegate.swift in Sources */,
 				C1B3977525A1F48600A3E388 /* SceneDelegate.swift in Sources */,
 				C1B3978A25A245D900A3E388 /* ResultsViewController.swift in Sources */,
